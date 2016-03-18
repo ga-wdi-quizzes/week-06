@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-It's a migration file 
+It's a migration file
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ It's a migration file
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+Router gets HTTP request from web browsers and checks it against specified controller actions. If there's a matching controller action it forwards it to the controller.
 ```
 
 ### Question 4
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -79,14 +79,13 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
 ```
 
 ### Question 8
@@ -117,7 +116,11 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+""$ rails new tunr"
+Creates new rails application folder named tunr. It sets the database application to default (SQLITE).
+
+"$ rails new . -d postgresql"
+Creates a new rails application in the current folder and sets postgresql as the database application.
 ```
 
 ### Question 10
@@ -127,7 +130,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
