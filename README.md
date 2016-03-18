@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-It's a migration file
+It's a migration file. The numbers represent timestamp  that was generated when the file was created. Rails uses the timestamp to keep track of what migrations has been executed and skips them during the next migration executions. 
 ```
 
 ### Question 3
