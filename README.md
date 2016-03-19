@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+It means there's no index.html.erb file defined for artists. The user would have to create it within the 'views' folder for artists.
 ```
 
 ### Question 2
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[] artist_song_path( @artist, @song )
 [] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -132,4 +132,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
