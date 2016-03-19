@@ -71,7 +71,10 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+Maybe model method.
+ I feel like it is model method because of separation of concerns. You want to have your logic in the model and not the controller so that your controller only controls where things go.
+You could create a custom helper but an inline link_to might work, however, inline code, if I remember correctly is bad.
+So than finally back to model method, you could create a method that checks for the avg_rating number and translates that to which css rule to use.
 ```
 
 ### Question 7
@@ -79,14 +82,14 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
 ```
 
 ### Question 8
@@ -104,7 +107,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+It is not accurate HTML because it has embedded ruby in it. You could got to your browser console and copy the finished html from the console.
 ```
 
 ### Question 9
@@ -117,7 +120,8 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+In the first command you are creating a new rails template and using the default SQLlite as your database.
+In the second command you already have a folder set up with your project name so the . makes it so you don't create a folder in a folder named the same thing. You are also specifying your database type as postgresql.
 ```
 
 ### Question 10
@@ -127,7 +131,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
