@@ -75,7 +75,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+This code would most make sense as a model method. This is to practice separation of concerns and follow the rails pattern "Fat Model, Skinny Controller". Since changing a color doesn't require directly accessing the database, it's not needed in the controller. As a model method, it can be accessed in the view, passing it the data the controller provided the view.
 ```
 
 ### Question 7
