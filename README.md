@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+To keep as DRY as possible (and keeping with the fat models, skinny controllers convention), it would make most sense to put the code in the model method. Because songs show up in different views, it would not make sense to use a helper method. You would have to repeat that code in each html.erb view where a song is listed. 
 ```
 
 ### Question 7
