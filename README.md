@@ -7,7 +7,9 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+
+This error means that there is no `index` view defined for the Artist model, so the Artists controller cannot find the appropriate view based on the routes defined in the `config` folder. In order to address this error, I would create an `index.html.erb` file in the `/app/views/artists` directory and then populate that file with the html and embedded ruby code necessary to display all artists in the Tunr app.
+
 ```
 
 ### Question 2
@@ -21,7 +23,9 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+
+This file is a migration, and it exists in the `db/migrate/` directory. Migrations allow us to alter the database schema for our application, as the `schema.rb` file should never be altered directly. Migrations tell Active Record how to modify the schema for the database (and the database itself) by adding or removing tables, columns, and entries in the database. The numbers at the beginning of the filename are a timestamp, because each migration is unique and should only be run once—this is important for prevention of data loss in the application.
+
 ```
 
 ### Question 3
@@ -29,7 +33,9 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+
+The routes in a given Rails application specify the route name (prefix), the HTTP verb used, the path (URL), and the controller action associated with that exact route (e.g., in Tunr, "POST   /artists(.:format)   artists#create"). The route tells us exactly which controller action will be activated by that route.
+
 ```
 
 ### Question 4
@@ -37,11 +43,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +58,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -132,4 +138,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
