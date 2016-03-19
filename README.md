@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+It's a migration file that'll create a table called artists; the table info gets save to the schema.rb file in an app. The numbers at the beginning are a UTC timestamp (YYYYMMDDHHMMSS).
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router is responsible for taking a user's request and sending it to the right controller; this is made possible by setting up the appropriate routes.
 ```
 
 ### Question 4
