@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+The code should be a controller method because the controller determines what to do with the information and what view should be displayed back to the user.
 ```
 
 ### Question 7
@@ -103,7 +103,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+Erb info can't be passed into a HTML validator, instead, the HTML should be copied and pasted from the web browser.
 ```
 
 ### Question 9
@@ -116,7 +116,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+rails new tunr will create a new tunr folder within the directory that the user is currently in. For example, if the user is already in a tunr folder and does 'rails new tunr' there will be a tunr folder inside of an existing tunr folder. 'rails new . -d postgresql' will create all the application files within the directory the user is currently, without creating a new folder, and tells the app that postgresql will be the database we're using.
 ```
 
 ### Question 10
