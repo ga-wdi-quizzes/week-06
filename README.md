@@ -41,9 +41,9 @@ The router sends the user's request to the controller actions. In a rails app, t
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song )
-[] new_artist_song_path( @artist )
-[] create_artist_song_path( @artist )
+[x] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
+[x] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
 [] new_song_path( @song )
 ```
@@ -56,7 +56,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
