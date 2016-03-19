@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+The code would make most sense as a MODEL method, as it would be a proper separation of concerns. The controller is the coordinator that takes parameters and returns HTML, but it should not be making business logic decisions such as determining the average rating of a song. We would create an avq_rating method in the song model that can then be called in the SongsController and display the HTML/CSS for the appropriate color.
 ```
 
 ### Question 7
@@ -79,14 +79,14 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+Delete ($ rails new . -d postgresql) because since we cloned down the app, we do not need to create a new app.
 ```
 
 ### Question 8
@@ -104,7 +104,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The HTML validator cannot properly read embedded Ruby html files (i.e. index.html.erb). Instead, load the page in your web browser, right click, select `View Page Source`, and copy the HTML from that into your generator.
 ```
 
 ### Question 9
@@ -117,7 +117,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The first command makes a directory called tunr and includes all of the rails folders/files in it. It also uses a SQLite database by default. The second command creates all the rails folders/files within whatever directory you are presently in. It also connects this app to a postgresql database.
 ```
 
 ### Question 10
@@ -127,7 +127,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
