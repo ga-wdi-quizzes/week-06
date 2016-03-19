@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+This is a migration file that you would create to add a table (and columns) to your database. The numbers in the beginning is a date/time stamp of when the migration file was created.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The rails router gives information to the controller to take the appropriate action depending on the request. For example, in Tunr, if the request is to see all artists, the controller will take the 'artist#index' action to ultimately return the index view page for all artists back to the browser.
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -132,4 +132,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
