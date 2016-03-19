@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+This error means that no view has been created for artists#index. I would go to app/views/artists and create an index.html.erb file to fix this error.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+This is a migration file that specifies the properties of the attribute columns of the artist table in the database. For example, this file would contain columns such as name:string and nationality: string. Upon running, rake db:migrate, the file would input those columns into the artist table. The numbers at the beginning are a timestamp of when this migration file was created, so the all the files will be listed out chronologically in your repo.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router determines which controller the request should be directed to. For example, if the user wants to go to /artists, the router would guide the request to the ArtistsController. If the user wants to go to songs/1, the router would guide the request to the SongsController.
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -132,4 +132,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
