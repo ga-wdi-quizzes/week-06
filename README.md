@@ -8,7 +8,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 
 ```text
 
-This error means that there is no `index` view defined for the Artist model, so the Artists controller cannot find the appropriate view based on the routes defined in the `config` folder. In order to address this error, I would create an `index.html.erb` file in the `/app/views/artists` directory and then populate that file with the html and embedded ruby code necessary to display all artists in the Tunr app.
+This error means that there is no `index` view defined for the Artist model, so the Artists controller cannot find the appropriate view based on the routes defined in the `config` folder. In order to address this error, I would create an `index.html.erb` file in the `/app/views/artists` directory and then populate that file with the HTML and embedded Ruby code necessary to display all artists in the Tunr app.
 
 ```
 
@@ -24,7 +24,7 @@ What is the purpose of this file, and what is the purpose of the numbers at the 
 
 ```text
 
-This file is a migration, and it exists in the `db/migrate/` directory. Migrations allow us to alter the database schema for our application, as the `schema.rb` file should never be altered directly. Migrations tell Active Record how to modify the schema for the database (and the database itself) by adding or removing tables, columns, and entries in the database. The numbers at the beginning of the filename are a timestamp, because each migration is unique and should only be run once—this is important for prevention of data loss in the application.
+This file is a migration, and it exists in the `db/migrate/` directory. Migrations allow us to alter the database schema for our application, as the `schema.rb` file should never be altered directly. Migrations tell Active Record how to modify the schema for the database (and the database itself) by adding or removing tables, columns, and entries. The numbers at the beginning of the filename are a timestamp, because each migration is unique and should only be run once—this is important for prevention of data loss in the application.
 
 ```
 
@@ -34,7 +34,7 @@ In a Rails application, how is the router related to controller actions?
 
 ```text
 
-The routes in a given Rails application specify the route name (prefix), the HTTP verb used, the path (URL), and the controller action associated with that exact route (e.g., in Tunr, "POST   /artists(.:format)   artists#create"). The route tells us exactly which controller action will be activated by that route.
+The routes in a given Rails application specify the route name (prefix), the HTTP verb used, the path (URL), and the controller action associated with that exact route (e.g., in Tunr, `POST   /artists(.:format)   artists#create`). The route tells us exactly which controller action will be activated by that route.
 
 ```
 
@@ -77,7 +77,9 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+
+ The song's title will appear in multiple views (for both songs and artists, for example), so it would make the most sense to define a helper method. Helper methods exist to extract some logic from the views (e.g., in this case, applying a different class to a song title depending on its rating) in order to keep the views lean. Controllers handle CRUD actions based on HTTP requests and routes, and model methods are concerned with making business logic available to multiple different routes (so that controllers do not have to repeat the same logic over and over again).
+
 ```
 
 ### Question 7
@@ -85,14 +87,17 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
+You do not need `$ rails new . -d postgresql`, because there is already an existing Rails app in the cloned repo.
+
 ```
 
 ### Question 8
@@ -110,7 +115,9 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+
+The validator will not be able to read the embedded Ruby, because it is server-side code that is used to render HTML in the browser. In order to validate the HTML output, you would need to follow these steps: (1) view the page as rendered in the browser; (2) right-click and select "View Page Source" (or similar command); and (3) copy and paste the rendered HTML into a validator.
+
 ```
 
 ### Question 9
@@ -123,7 +130,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+
+The `$ rails new tunr` command will create a new Rails app within a new directory called `tunr`; this application will use a SQLite database, which is the default database for Rails. The `$ rails new . -d postgresql` will create a new Rails app within the *current* working directory and will use PostgreSQL as its database, instead of SQLite.
+
 ```
 
 ### Question 10
@@ -133,7 +142,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
