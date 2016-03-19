@@ -23,7 +23,9 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The purpose of this file is to create a table of artists for the rails app. It will be used in migration to edit the schema file.
+
+The numbers at the beginning of its name is a timestamp. The timestamp is used to determine which migration files should be run and in what order.
 ```
 
 ### Question 3
@@ -31,7 +33,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router sends the user's request to the controller actions. In a rails app, the router provides a RESTful routes approach, which includes GET, PUT (PATCH), POST, and DELETE commands to relay the request.
 ```
 
 ### Question 4
