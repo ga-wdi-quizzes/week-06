@@ -38,7 +38,7 @@ Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model
 
 ```
 [] artist_song_path( @artist, @song )
-[] new_artist_song_path( @artist )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
 [] new_song_path( @song )
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
