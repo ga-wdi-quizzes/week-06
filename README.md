@@ -79,14 +79,13 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
 $ rails new . -d postgresql
 $ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ rake db:drop
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
 ```
 
 ### Question 8
@@ -104,7 +103,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The validator throws errors because it doesn't understand the embedded ruby code in the html. In order to validate your html code, you have to copy/paste the html code from the page source.
 ```
 
 ### Question 9
@@ -117,7 +116,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The second command sets up a new rails app using postgreSQL as the database mgmt system. Otherwise, it will default to mySQL (I think).
 ```
 
 ### Question 10
@@ -127,7 +126,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
