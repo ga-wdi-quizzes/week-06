@@ -8,6 +8,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 
 ```text
 Your answer...
+This means templates such as articles/new templates are missing and cannot inherit controllers such as Application controllers.
 ```
 
 ### Question 2
@@ -22,6 +23,7 @@ What is the purpose of this file, and what is the purpose of the numbers at the 
 
 ```text
 Your answer...
+The purpose of this file is to create tables within the active records. The number presented in the beginning of the files name contains the date and time the file was created.
 ```
 
 ### Question 3
@@ -37,11 +39,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -50,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 
 ```
 [] (a) Server, (b) Browser  
-[] (a) Browser, (b) Database  
+[X] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
 [] (a) Browser, (b) Server  
 ```
@@ -72,6 +74,7 @@ This code would make most sense as a...
 
 ```text
 Your answer...
+controller method would be the best option to use because 
 ```
 
 ### Question 7
@@ -118,6 +121,7 @@ $ rails new . -d postgresql
 
 ```
 Your answer...
+railsnew turnr creates a new porject when the project is forked and clone while rails new . -d postgresql creates and saves a file with its own repository.
 ```
 
 ### Question 10
@@ -126,10 +130,9 @@ Which **one** of the following is the most correct way to display an error messa
 
 ```rb
 [] @error = "Wrong password!"
-[] puts "Wrong password!"
+[X] puts "Wrong password!"
 [] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
