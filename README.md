@@ -23,7 +23,7 @@ What is the purpose of this file, and what is the purpose of the numbers at the 
 
 ```text
 Your answer...
-The purpose of this file is to create tables within the active records. The number presented in the beginning of the files name contains the date and time the file was created.
+This creates a migrations file database. The number presented in the beginning of the files name contains the date and time the file was created.
 ```
 
 ### Question 3
@@ -32,6 +32,7 @@ In a Rails application, how is the router related to controller actions?
 
 ```text
 Your answer...
+The url is defined by the router.
 ```
 
 ### Question 4
@@ -52,9 +53,9 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 
 ```
 [] (a) Server, (b) Browser  
-[X] (a) Browser, (b) Database  
+[] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -82,14 +83,14 @@ controller method would be the best option to use because the avg_rating attribu
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ [5] rake db:drop
-$ [4] rake db:create
-$ [2] rails new . -d postgresql
-$ [3] bundle install
+$ [4] rake db:drop
+$ [3] rake db:create
+$ [no] rails new . -d postgresql
+$ [2] bundle install
 $ [1] git clone git@github.com:ga-wdi-exercises/moar-tunr.git
-$ [6] rake db:migrate
-$ [] rails s
-$ [7] rake db:seed
+$ [5] rake db:migrate
+$ [7] rails s
+$ [6] rake db:seed
 ```
 
 ### Question 8
@@ -108,6 +109,7 @@ The validator throws errors at you! Why? Assuming you haven't made any mistakes 
 
 ```
 Your answer...
+the erb tags are incomplete. Instead of "<%" there needs to be an "<%=" for the beginning half of the erb tags.
 ```
 
 ### Question 9
@@ -121,7 +123,7 @@ $ rails new . -d postgresql
 
 ```
 Your answer...
-railsnew turnr creates a new porject when the project is forked and clone while rails new . -d postgresql creates and saves a file with its own repository.
+rails new turnr creates a new project folder when the project is forked and clone while rails new . -d postgresql creates and saves a file with its own repository.
 ```
 
 ### Question 10
@@ -130,8 +132,8 @@ Which **one** of the following is the most correct way to display an error messa
 
 ```rb
 [] @error = "Wrong password!"
-[X] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[] puts "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
