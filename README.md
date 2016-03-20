@@ -74,7 +74,7 @@ This code would make most sense as a...
 
 ```text
 Your answer...
-controller method would be the best option to use because 
+controller method would be the best option to use because the avg_rating attribute needs to be made into a loop within a method.
 ```
 
 ### Question 7
@@ -82,14 +82,14 @@ controller method would be the best option to use because
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
-$ rake db:migrate
-$ rails s
-$ rake db:seed
+$ [5] rake db:drop
+$ [4] rake db:create
+$ [2] rails new . -d postgresql
+$ [3] bundle install
+$ [1] git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ [6] rake db:migrate
+$ [] rails s
+$ [7] rake db:seed
 ```
 
 ### Question 8
