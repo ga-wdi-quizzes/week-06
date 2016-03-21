@@ -4,10 +4,10 @@
 
 You're working on your Tunr app and you encounter this error. What does it mean and where would you go first to address it?  
 
-![Rails error](http://i.imgur.com/9NR7XNT.png)  
+![Rails error](http://i.imgur.com/9NR7XNT.png)
 
 ```text
-Your answer...
+It means that there is no html view page associated with the link.
 ```
 
 ### Question 2
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-To keep as DRY as possible (and keeping with the fat models, skinny controllers convention), it would make most sense to put the code in the model method. Because songs show up in different views, it would not make sense to use a helper method. You would have to repeat that code in each html.erb view where a song is listed. 
+To keep as DRY as possible (and keeping with the fat models, skinny controllers convention), it would make most sense to put the code in the model method. Because songs show up in different views, it would not make sense to use a helper method. You would have to repeat that code in each html.erb view where a song is listed.
 ```
 
 ### Question 7
