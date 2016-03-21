@@ -120,7 +120,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-The first command creates a basic rails app with the default database. The second command creates a basic rails app with a postgres database.
+The first command creates a basic rails app named tunr with the default database. The second command creates a basic rails app in the current directory with a postgres database.
 ```
 
 ### Question 10
