@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+This error indicates the index view file is missing.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The file listed above is a rails-generated migration file.  Migrations are used to alter database schemata.  The filename is a unique identifier and contains the time stamp at the file's creation (YYYYMMDDHHMMS).  When executing the 'rake db:migrate' command, migration files will run in the order they are created in.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router receives requests from the client and passes them on the appropriate controller.
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+I would not place the code in the model because it is primary concern should be accessing the data necessary to render the appropriate view.  I would also not place the code in the controller because its function should focus on controlling how server data are routed.  That then leaves using a helper method, which makes sense because these methods can be used to focus on managing interfaces for user input (forms).
 ```
 
 ### Question 7
@@ -79,14 +79,14 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+***$ rails new . -d postgresql >> Don't need this one!***
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
 ```
 
 ### Question 8
@@ -104,7 +104,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The validator does not recognize ruby code. One must first access the HTML in the browser console and place it into the tool for validation.
 ```
 
 ### Question 9
@@ -117,7 +117,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+In the first example, rails will generate files for a new application inside a (new) folder called "tunr". It will also use SQLite as its default database tool.
+
+In the second example, rails will generate all application files inside the existing folder without creating a new one. It will also  designate PostgreSQL as its default database tool.
 ```
 
 ### Question 10
@@ -127,9 +129,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
