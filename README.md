@@ -41,7 +41,7 @@ Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model
 [x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[x] new_song_path( @song )
+[] new_song_path( @song )
 ```
 
 ### Question 5
