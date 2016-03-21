@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+The error is referring to a link to an image file in the application view files
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-It's a migration file. The numbers represent timestamp  that was generated when the file was created. Rails uses the timestamp to keep track of what migrations has been executed and skips them during the next migration executions. 
+It's a migration file. The numbers represent timestamp  that was generated when the file was created. Rails uses the timestamp to keep track of what migrations has been executed and skips them during the next migration executions.
 ```
 
 ### Question 3
@@ -39,7 +39,7 @@ Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model
 ```
 [] artist_song_path( @artist, @song )
 [] new_artist_song_path( @artist )
-[] create_artist_song_path( @artist )
+[X] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
 [] new_song_path( @song )
 ```
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+Helper Method
 ```
 
 ### Question 7
@@ -103,7 +103,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+Remove the clown hats. Clown hats are for Embedded Ruby files only.
 ```
 
 ### Question 9
