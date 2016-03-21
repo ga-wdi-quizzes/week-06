@@ -126,8 +126,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[x] flash[:alert] = "Wrong password!"
+[] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
-[] flash[:notice] = "Wrong password!"
+[x] flash[:notice] = "Wrong password!"
 ```
