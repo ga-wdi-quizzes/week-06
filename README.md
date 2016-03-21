@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+This error indicates the index view file is missing.
 ```
 
 ### Question 2
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+I would not place the code in the model because it is primary concern should be accessing the data necessary to render the appropriate view.  I would also not place the code in the controller because its function should focus on controlling how server data are routed.  That then leaves using a helper method, which makes sense because these methods can be used to focus on managing interfaces for user input (forms).
 ```
 
 ### Question 7
@@ -80,7 +80,7 @@ You clone yet another Tunr repo. Put the following commands in the correct order
 
 ```
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
-$ rails new . -d postgresql
+***$ rails new . -d postgresql >> Don't need this one!***
 $ bundle install
 $ rake db:drop
 $ rake db:create
