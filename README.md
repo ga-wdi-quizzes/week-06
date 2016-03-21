@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+I would go to the index files and search for an artists index file. The error is saying there is a missing artists/index file. It would be an .html.erb file.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The file is a migrate file- it appears when you command rails migration and adds a new table to the database. The numbers are timestamps for the computer to know when the tables were created and prevent doubles from occurring and deleting information from the database.
 ```
 
 ### Question 3
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[] artist_song_path( @artist, @song )
 [] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -132,4 +132,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
