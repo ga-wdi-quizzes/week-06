@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+you need to create an index.html.erb file in your views/artists folder
 ```
 
 ### Question 2
@@ -21,7 +21,8 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+that is the migration file to create a table titled "artists"
+the numbers represent the migration id. This allows you to refer to that migration at any time and tracks the progress of our table
 ```
 
 ### Question 3
@@ -29,7 +30,17 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+the router defines the CRUD within our app. It allows us to create, read, update, and delete. This CRUD creates six verbs that correlates to our controller.
+
+Get => #index
+Get => #new
+Post => #creates
+Get => #show
+Get => #edit
+Patch/Put => #update
+Delete => #destroy
+
+each of these "verbs" must defined in our controller so requests brought in by the router knows what to do for each.
 ```
 
 ### Question 4
@@ -37,11 +48,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -50,7 +61,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 
 ```
 [] (a) Server, (b) Browser  
-[] (a) Browser, (b) Database  
+[x] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
 [] (a) Browser, (b) Server  
 ```
@@ -71,7 +82,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+I believe the code would have to be placed into the model. I say this because your controller should by as DRY as possible, only with the necessary RESTful attributes. A helper method is written for the view but from my understanding, any method that will be long and deals with the behavior of an object should go in the model. You would right a method title ratings and define how you want that method to behave in the inside. You can call this method anywhere within the application without making the controller or view cluttered. Keeping the controller and view files clean and easier for the router to read.
 ```
 
 ### Question 7
@@ -79,14 +90,17 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
-$ rake db:migrate
-$ rails s
-$ rake db:seed
+
+rails new . -d postgresql
+bundle install
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed
+rails s
+
+It said it was already cloned so I'm assuming that part was done. Also, because there were other versions, since this isn't the first Tunr, you would have to drop the previous tables.
+
 ```
 
 ### Question 8
@@ -104,7 +118,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+validates :name :presence => true
 ```
 
 ### Question 9
@@ -117,7 +131,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+rails new tunr will create a new rails app within a directory named tunr without postgresql
+
+rails new . -d postgresql will create a new rails app within the current directory with postgresql
 ```
 
 ### Question 10
@@ -127,9 +143,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
