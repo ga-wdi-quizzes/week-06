@@ -6,21 +6,19 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
-```text
-Your answer...
+```The error is telling us that we are missing a file for the view. Go to the app/views folder within tunr.
 ```
 
 ### Question 2
 
 Consider this file name:
 
-```
-20150726145027_create_artists.rb
+```20150726145027_create_artists.rb
 ```
 
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
-```text
+```This is a migration. They are a feature of Active Record that allow the user to make changes and update their database over time. Migrations allow us to avoid hardcoding schema modifications in pure SQL by using Ruby Domain Specific Language to describe changes to table. The numbers in the file represent the timestamp, which is called for as an attribute in the database table. It order, it stands for Year, Month, Day, Hour, Minute, Second....or UTC YYYYMMDDHHMMSS. For this file, the year is Year 2015, Month is July or 07, Day is 26, Hour is 1400 (2pm), Minute is 50, Second is 27.  
 Your answer...
 ```
 
@@ -28,8 +26,7 @@ Your answer...
 
 In a Rails application, how is the router related to controller actions?  
 
-```text
-Your answer...
+```The router comes before the controller (it is the gateway to the MVC). The role of the router is to receive an HTTP request and match it to a controller that will carry out the requested action.  
 ```
 
 ### Question 4
@@ -37,11 +34,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[] artist_song_path( @artist, @song )
 [] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[x] new_song_path( @song )
 ```
 
 ### Question 5
@@ -51,7 +48,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 ```
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
-[] (a) Database, (b) Server  
+[x] (a) Database, (b) Server  
 [] (a) Browser, (b) Server  
 ```
 
@@ -79,14 +76,13 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rails new . -d postgresql
 $ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
 ```
 
 ### Question 8
@@ -103,8 +99,8 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
-```
-Your answer...
+```1. Declare document type <!DOCTYPE html>
+
 ```
 
 ### Question 9
@@ -116,8 +112,7 @@ $ rails new tunr
 $ rails new . -d postgresql
 ```
 
-```
-Your answer...
+```'rails new tunr' creates a directory called 'tunr' and will install the gem dependencies that are already mentioned in Gemfile using bundle install. 'rails new . -d postgresql' tells 'tunr' to use postgres as its default database. Otherwise, Rails uses SQLite as a database by default.
 ```
 
 ### Question 10
@@ -127,9 +122,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
