@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+The error means that you are missing a view. I would go to the view folder first and check for an artists directory.
 ```
 
 ### Question 2
@@ -21,7 +21,8 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The purpose of the file is to set up the data migration by changing the Database schema. The numbers at the
+beginning is a UTC timestamp to determine which migration should be run and what order it should run.
 ```
 
 ### Question 3
@@ -29,7 +30,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router is related to controller actions because its job is to recognize URLs and "route" to the controller
 ```
 
 ### Question 4
@@ -38,7 +39,7 @@ Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model
 
 ```
 [] artist_song_path( @artist, @song )
-[] new_artist_song_path( @artist )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
 [] new_song_path( @song )
