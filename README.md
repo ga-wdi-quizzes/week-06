@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+Rails is looking for an HTML template .  The solution is to create a file named `index.html.erb` in the application's `app/views/artists` folder and put the necessary HTML code in it.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+It is a migration file to be processed by the rake command.  When run, it will modify something in the artists table of the database.  The numbers at the beginning of the file are a date stamp; the `rake db:migrate` command runs the migration files in chronological order based on the date stamp, oldest to newest.  This is done to make sure that database modifications can be rerun or rolled back as needed.    
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router matches an HTTP request to a controller and action.  When the controller receives a request from the application, it uses the routes defined in the router to determine which folders to go to to perform which actions.  
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+Probably a helper, since it would only be called when the page is being rendered.  If it were in the model or controller it would be called more often, but not executed, which still burns cycles.  
 ```
 
 ### Question 7
@@ -79,14 +79,17 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
+Deleted:
+$ rails new . -d postgresql
+
 ```
 
 ### Question 8
@@ -104,7 +107,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The ERB file is a template used by Rails to generate HTML.  The tags ('<%' and '%>') are used to insert data from a database when Rails generates the final HTML, and the HTML validator is rejecting them.  In order to verify the HTML you'd have to run the website, connect to the page with Chrome, view the source code in Chrome, then copy and paste the the source code from Chrome to the validator.   
 ```
 
 ### Question 9
@@ -117,7 +120,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+`rails new tunr` will create a new folder named `tunr` and build a new Rails appliction structure in that folder using the default settiings.  
+
+`rails new . -d postgresql` will create a new Rails application structure in the existing folder and configure it to use postgresql rather than the default database engine (sqlite3).
 ```
 
 ### Question 10
@@ -127,9 +132,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
