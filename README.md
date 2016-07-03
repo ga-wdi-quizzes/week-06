@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Rails is looking for an HTML template .  The solution is to create a file named `index.html.erb` in the application's `app/views/artists` folder and put the necessary HTML code in it. 
+Rails is looking for an HTML template .  The solution is to create a file named `index.html.erb` in the application's `app/views/artists` folder and put the necessary HTML code in it.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-It is a migrate file to be processed by the rake command.  When run, it will modify something in the artists table of the database.  The numbers at the beginning of the file are a date stamp; the `rake db:migrate` command runs them in chronological order, oldest to newest.  
+It is a migration file to be processed by the rake command.  When run, it will modify something in the artists table of the database.  The numbers at the beginning of the file are a date stamp; the `rake db:migrate` command runs the migration files in chronological order based on the date stamp, oldest to newest.  This is done to make sure that database modifications can be rerun or rolled back as needed.    
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ It is a migrate file to be processed by the rake command.  When run, it will mod
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-The router matches an HTTP request to a controller and action.  When the controller receives a request from the application to perform a function, it uses the routes defined in the router to determine which folders to go to to perform which actions.  
+The router matches an HTTP request to a controller and action.  When the controller receives a request from the application, it uses the routes defined in the router to determine which folders to go to to perform which actions.  
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ The router matches an HTTP request to a controller and action.  When the control
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[] artist_song_path( @artist, @song )
 [X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Probably a helper, since it would only be called when the page is being rendered.  If it were in the model or controller it would be called more often.  
+Probably a helper, since it would only be called when the page is being rendered.  If it were in the model or controller it would be called more often, but not executed, which still burns cycles.  
 ```
 
 ### Question 7
@@ -79,14 +79,16 @@ Probably a helper, since it would only be called when the page is being rendered
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ bundle install
-$ rails new . -d postgresql
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
 $ rake db:drop
 $ rake db:create
 $ rake db:migrate
 $ rake db:seed
 $ rails s
+
+Deleted:
+$ rails new . -d postgresql
 
 ```
 
@@ -135,4 +137,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
