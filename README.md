@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+It means exactly the error's title says. The template for this route is missing. I would go /app/views/ directory and create a view file that is required for this route.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+This is a database migration file for creating a table called "artists". In this file, we define the structure of the "artist" table, then we send it to database by using `rake db:migrate` command. The number in the file name is a timestamp of this file's creation. It is for preventing conflicts in case that multiple contributors want to make changes to database simultaneously. Rails processes the migration files in the order of timestamps.
 ```
 
 ### Question 3
@@ -29,7 +29,8 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+When we issue a http request to a Rails application, it goes to the router first. The router has a predefined pairs of a path and a controller action.
+The route checks if the requested path is defined. If it is, matching controller action is invoked. Otherwise usually 404 not found page is rendered.
 ```
 
 ### Question 4
@@ -37,11 +38,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[レ] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -132,4 +133,3 @@ Which **one** of the following is the most correct way to display an error messa
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
