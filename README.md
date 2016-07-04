@@ -21,7 +21,9 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The file is a database migrate file that specifies the strcuture of an artists table using Ruby syntax. It's called a migrate file because Ruby handles the differences between databases, so a Ruby app can easily migrate from one "brand" of database to another.
+
+The numbers arw a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. I'm not really sure why Ruby thinks that fie in particular needs a time stamp, as opposed to any other file.
 ```
 
 ### Question 3
