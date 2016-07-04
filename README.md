@@ -53,8 +53,11 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[レ] (a) Browser, (b) Server  
 ```
+
+[Home Guides Index Contribute Credits
+Ruby on Rails Security Guide](http://guides.rubyonrails.org/security.html)
 
 ### Question 6
 
@@ -72,22 +75,21 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+I would consider the logic to convert a rating to color as a helper because it is only for presentation, not for handling http requests or the song model's behaviors or attributes. It can live in the song model but it is more appropriate to be seen as a helper since it is merely a utility function for presentation.
 ```
 
 ### Question 7
 
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
-```
-$ rake db:drop
-$ rake db:create
+```bash
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rails new . -d postgresql
 $ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ rake db:create
+$ rake db:seed
 $ rake db:migrate
 $ rails s
-$ rake db:seed
 ```
 
 ### Question 8
@@ -105,7 +107,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The problem is that erb is not a valid HTML. We can obtain the page's HTML by visiting the page on Google Chrome and open "view-source". We can copy that HTML into the validator.
 ```
 
 ### Question 9
@@ -117,8 +119,14 @@ $ rails new tunr
 $ rails new . -d postgresql
 ```
 
-```
-Your answer...
+```yaml
+first:
+  - Create a directory called "tunr".
+  - Generate an app within the "tunr" directory.
+  - Use SQLite as a database.
+second:
+  - Generate an app within the current directory.
+  - Use PostgreSQL as a database.
 ```
 
 ### Question 10
@@ -128,7 +136,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[レ] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
