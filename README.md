@@ -7,7 +7,8 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+That requires creating a file named index.html.erb in opp/views/artists. The file could presumably be empty,
+but would probably contain simple text at a minimum, "vanilla" html, or HTML enhanced with Ruby. 
 ```
 
 ### Question 2
