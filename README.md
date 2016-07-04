@@ -26,7 +26,7 @@ The file is a database migrate file that specifies the strcuture of an artists t
 It's called a migrate file because Ruby handles the differences between databases, so a Ruby app can 
 easily migrate from one "brand" of database to another.
 
-The numbers arw a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. 
+The numbers are a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. 
 I'm not really sure why Ruby thinks that fie in particular needs a time stamp, as opposed 
 to any other file.
 ```
@@ -36,7 +36,7 @@ to any other file.
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router sends a request to the appropriate controller, with the request coming in the form of the URL requested. 
 ```
 
 ### Question 4
