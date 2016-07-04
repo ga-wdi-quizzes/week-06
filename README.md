@@ -21,9 +21,13 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-The file is a database migrate file that specifies the strcuture of an artists table using Ruby syntax. It's called a migrate file because Ruby handles the differences between databases, so a Ruby app can easily migrate from one "brand" of database to another.
+The file is a database migrate file that specifies the strcuture of an artists table using Ruby syntax. 
+It's called a migrate file because Ruby handles the differences between databases, so a Ruby app can 
+easily migrate from one "brand" of database to another.
 
-The numbers arw a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. I'm not really sure why Ruby thinks that fie in particular needs a time stamp, as opposed to any other file.
+The numbers arw a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. 
+I'm not really sure why Ruby thinks that fie in particular needs a time stamp, as opposed 
+to any other file.
 ```
 
 ### Question 3
@@ -81,14 +85,19 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
+
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
+$ rails new . -d postgresql
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
+`rake db:drop` ia not needed, since there is no existing database to drop. It would be like the Skipper yelling, 
+"Gilligan! Drop those coconuts!" when Gilligan didn't have any coconuts. Hijinks might ensue, and Ruby on Rails 
+is known to have issues with hijinks. 
+
 ```
 
 ### Question 8
