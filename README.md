@@ -116,7 +116,8 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+It doesn't validate as a HTML because it's not HTML; it's  HTML with embedded Ruby. To accurately validate it, 
+evaluate the HTML: Rails generates for you. 
 ```
 
 ### Question 9
@@ -129,7 +130,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The first creates a new Rails project in a new directory called tunr (well, I guess it would do it in an existing directory called tunr), using whatever Rail's default database is (not postgresql)
+
+The second creates a new Rails project in the current directory, using postgresql instead of the default. 
 ```
 
 ### Question 10
