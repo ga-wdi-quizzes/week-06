@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+need to create a index.html.erb in your artists/views folder
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+This file allows you to create tables and columns in your database when you run the command rake db:migrate, the numbers in the front are to show when the file was create.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The rails router takes in RESTful routes and matches them to controller actions.
 ```
 
 ### Question 4
@@ -38,7 +38,7 @@ Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model
 
 ```
 [] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
 [] new_song_path( @song ) 
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[X] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -67,11 +67,11 @@ Without getting into specifics of how you would write the code itself, pick one 
 
 This code would make most sense as a...
 - ...model method.
-- ...controller method.
+- ...controller method.
 - ...helper method.
 
 ```text
-Your answer...
+use the helper method, then include that in the controller so the controller file will be easier to read
 ```
 
 ### Question 7
@@ -79,14 +79,14 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rails new . -d postgresql
 $ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
 ```
 
 ### Question 8
@@ -104,7 +104,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+Copy the rendered source code and place it into a validator
 ```
 
 ### Question 9
@@ -117,7 +117,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+rails new tunr command will create a folder and use sqlite 
 ```
 
 ### Question 10
@@ -129,7 +129,7 @@ Which **one** of the following is the most correct way to display an error messa
 [] puts "Wrong password!"
 [] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
-[] render error: "Wrong password!"
+[X] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
 
