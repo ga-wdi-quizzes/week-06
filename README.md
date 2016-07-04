@@ -8,6 +8,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 
 ```text
 Your answer...
+you need to create a view (index.html.erb) for artists index
 ```
 
 ### Question 2
@@ -22,6 +23,7 @@ What is the purpose of this file, and what is the purpose of the numbers at the 
 
 ```text
 Your answer...
+this file is a migration file - it contains the layout for the table (in the database). the numbers denote a time stamp for when it was created
 ```
 
 ### Question 3
@@ -30,6 +32,7 @@ In a Rails application, how is the router related to controller actions?
 
 ```text
 Your answer...
+if a request to some application is recognized in the router, the router will send the request to the controller, which then performs the necessary action. if the router does not recognize the request, it will error out
 ```
 
 ### Question 4
@@ -37,11 +40,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +55,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -72,6 +75,8 @@ This code would make most sense as a...
 
 ```text
 Your answer...
+model method
+Ideally, one should aim to have fat models and skinny controllers, and the logic behind which song should be which color depending on the rating can all be done in the model.
 ```
 
 ### Question 7
@@ -88,6 +93,16 @@ $ rake db:migrate
 $ rails s
 $ rake db:seed
 ```
+````
+1. $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+2. $ bundle install
+3. $ rake db:drop
+4. $ rake db:create
+5. $ rake db:migrate
+6. $ rake db:seed
+7. $ rails s
+````
+
 
 ### Question 8
 
@@ -105,6 +120,7 @@ The validator throws errors at you! Why? Assuming you haven't made any mistakes 
 
 ```
 Your answer...
+see if it works on your page ?
 ```
 
 ### Question 9
@@ -118,6 +134,8 @@ $ rails new . -d postgresql
 
 ```
 Your answer...
+rails new tunr makes a completely new rails app without specifying that we want to use postgresql - i think the default might be MySQL.
+the second command creates a all the rails app folders within the directory that you already have (denoted by the . ). also it specifies that we want to use postgresql
 ```
 
 ### Question 10
@@ -127,9 +145,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
