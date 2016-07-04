@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+The artist index view needs to be created in the views folder. It's either missing, or routed incorrectly.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+its a migration file, the numbers at the beginning are a time stamp / method of version control.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router takes a query from the browser and directs it to its corresponding controller.
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[x] artist_song_path( @artist, @song )
 [] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,22 +71,21 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+To seperate concerns, a helper method would be the best action. The model should be focused purely on business logic, the controller should be focused on efficiently handling browser query's. a good helper method would be the best way to handle this additional functionality.
 ```
 
 ### Question 7
 
-You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
+You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used. #DjKhaledVoice #AnotherOne
 
 ```
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:drop
 $ rake db:create
-$ rails new . -d postgresql
-$ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ bundle install
+$ rails s
 ```
 
 ### Question 8
@@ -117,7 +116,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The first terminal command will make a new rails directory called tunr, it will use the default database type (not the right word for it, but it will use sqlite and not postgresql)
+
+the second command will create a new rails directory, but it will be unamed, and will use postgresql as its database type.
 ```
 
 ### Question 10
@@ -127,9 +128,10 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
-```
 
+what exactly is the difference between using flash.notice, and flash.alert in this example?
+```
