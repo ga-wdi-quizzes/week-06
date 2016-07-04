@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+This is rails saying that a view is missing for the png file. I would create a view for it in the app/views. An "index.html.erb" file should be created.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+This is a migration file. This is where the columns in a table are created. It helps avoid hardcoding the schema file. The numbers at the beginning of its name is simply a time stamp.
 ```
 
 ### Question 3
@@ -29,7 +29,8 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router is responsible for retrieving HTTP requests from the browser and matches it to a controller and action. When the controller receives a request, it makes use of the router to determine which routes to take to carry out the needed action.
+
 ```
 
 ### Question 4
@@ -37,11 +38,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +53,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,7 +72,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+The code would make most sense as a helper method since it is only used to change appearance.
 ```
 
 ### Question 7
@@ -79,14 +80,13 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$$ rails new . -d postgresql
+$ bundle install
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
 ```
 
 ### Question 8
@@ -104,7 +104,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+It throws errors because it uses embedded ruby which isn't valid HTML. A solution could be going to the browser and getting the HTML code from the page source.  
 ```
 
 ### Question 9
@@ -117,7 +117,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The first one creates a new app called tunr. It uses the gem dependencies that are already specified in bundle install. This means that the default database SQLite will be used. While the second one creates the app and specifies that the database to be used would be postgres.
 ```
 
 ### Question 10
@@ -127,9 +127,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
