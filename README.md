@@ -7,7 +7,7 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+a view is missing. make an index.html.erb file in view/artists.
 ```
 
 ### Question 2
@@ -21,7 +21,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+That is a migration file and the numbers at the beginning are the timestamp.
 ```
 
 ### Question 3
@@ -29,7 +29,7 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+the router checks the controller for routes to views
 ```
 
 ### Question 4
@@ -37,11 +37,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[x] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -52,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,7 +71,7 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+this definitely seems like a model method to me. separation of concerns.
 ```
 
 ### Question 7
@@ -79,14 +79,14 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
+$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
 $ rails new . -d postgresql
 $ bundle install
-$ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+$$$$$$$$$$$$
 ```
 
 ### Question 8
@@ -117,7 +117,7 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+the 'dot' makes sure you dont create ANOTHER directory named tunr inside of your tunr directory and the '-d' specifies the type of db.
 ```
 
 ### Question 10
@@ -128,8 +128,7 @@ Which **one** of the following is the most correct way to display an error messa
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
 [] flash[:alert] = "Wrong password!"
-[] session[:error] = "Wrong password!"
+[x] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
