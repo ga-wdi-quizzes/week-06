@@ -7,8 +7,9 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-That requires creating a file named index.html.erb in opp/views/artists. The file could presumably be empty,
-but would probably contain simple text at a minimum, "vanilla" html, or HTML enhanced with Ruby. 
+That requires creating a file named index.html.erb in opp/views/artists. The file 
+could presumably be empty, but would probably contain simple text at a minimum, 
+"vanilla" html, or HTML enhanced with Ruby. 
 ```
 
 ### Question 2
@@ -36,7 +37,8 @@ to any other file.
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-The router sends a request to the appropriate controller, with the request coming in the form of the URL requested. 
+The router sends a request to the appropriate controller, with the request coming 
+in the form of the URL requested. 
 ```
 
 ### Question 4
@@ -117,7 +119,7 @@ The validator throws errors at you! Why? Assuming you haven't made any mistakes 
 
 ```
 It doesn't validate as a HTML because it's not HTML; it's  HTML with embedded Ruby. To accurately validate it, 
-evaluate the HTML: Rails generates for you. 
+evaluate the HTML Rails generates for you. 
 ```
 
 ### Question 9
@@ -142,7 +144,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
