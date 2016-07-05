@@ -80,7 +80,11 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+A model is more for defining the database itself, and a controller is more for defining what Rails does 
+in response to a request. It wouldn't be handled in a controller, since this would presumably apply 
+whenever a song is displayed, no matter what the request was. A model might apply, since this specifies an
+integer from 1 to 10. But ther range is not really the point of this; the point is the cnange of colors, 
+so a helper method is the best choice. 
 ```
 
 ### Question 7
