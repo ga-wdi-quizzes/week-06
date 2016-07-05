@@ -7,7 +7,9 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+That requires creating a file named index.html.erb in opp/views/artists. The file 
+could presumably be empty, but would probably contain simple text at a minimum, 
+"vanilla" html, or HTML enhanced with Ruby. 
 ```
 
 ### Question 2
@@ -21,7 +23,13 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+The file is a database migrate file that specifies the strcuture of an artists table using Ruby syntax. 
+It's called a migrate file because Ruby handles the differences between databases, so a Ruby app can 
+easily migrate from one "brand" of database to another.
+
+The numbers are a timestamp, indicating the file was "born" on 26 July 2015 at 2:50:27 PM. 
+I'm not really sure why Ruby thinks that fie in particular needs a time stamp, as opposed 
+to any other file.
 ```
 
 ### Question 3
@@ -29,7 +37,8 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router sends a request to the appropriate controller, with the request coming 
+in the form of the URL requested. 
 ```
 
 ### Question 4
@@ -37,7 +46,7 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
+[x] artist_song_path( @artist, @song ) 
 [] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
@@ -52,7 +61,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 [] (a) Server, (b) Browser  
 [] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
-[] (a) Browser, (b) Server  
+[x] (a) Browser, (b) Server  
 ```
 
 ### Question 6
@@ -71,7 +80,11 @@ This code would make most sense as a...
 - ...helper method.
 
 ```text
-Your answer...
+A model is more for defining the database itself, and a controller is more for defining what Rails does 
+in response to a request. It wouldn't be handled in a controller, since this would presumably apply 
+whenever a song is displayed, no matter what the request was. A model might apply, since this specifies an
+integer from 1 to 10. But ther range is not really the point of this; the point is the cnange of colors, 
+so a helper method is the best choice. 
 ```
 
 ### Question 7
@@ -79,14 +92,19 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
+
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
+$ rails new . -d postgresql
+$ rake db:create
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
+`rake db:drop` ia not needed, since there is no existing database to drop. It would be like the Skipper yelling, 
+"Gilligan! Drop those coconuts!" when Gilligan didn't have any coconuts. Hijinks might ensue, and Ruby on Rails 
+is known to have issues with hijinks. 
+
 ```
 
 ### Question 8
@@ -104,7 +122,8 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+It doesn't validate as a HTML because it's not HTML; it's  HTML with embedded Ruby. To accurately validate it, 
+evaluate the HTML Rails generates for you. 
 ```
 
 ### Question 9
@@ -117,7 +136,10 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+The first creates a new Rails project in a new directory called tunr (well, I guess it could 
+do it in an existing directory called tunr), using whatever Rail's default database is (not postgresql)
+
+The second creates a new Rails project in the current directory, using postgresql instead of the default. 
 ```
 
 ### Question 10
@@ -127,7 +149,7 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[x] flash[:alert] = "Wrong password!"
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
