@@ -7,7 +7,8 @@ You're working on your Tunr app and you encounter this error. What does it mean 
 ![Rails error](http://i.imgur.com/9NR7XNT.png)  
 
 ```text
-Your answer...
+The html page for artist index is missing; the controller doesn't know where to send users.
+
 ```
 
 ### Question 2
@@ -21,7 +22,7 @@ Consider this file name:
 What is the purpose of this file, and what is the purpose of the numbers at the beginning of its name?
 
 ```text
-Your answer...
+Migration file. It's purpose is to list changes to the schema with a time stamp of when fields were added, removed, updated, etc.
 ```
 
 ### Question 3
@@ -29,7 +30,8 @@ Your answer...
 In a Rails application, how is the router related to controller actions?  
 
 ```text
-Your answer...
+The router indicates which of the seven CRUD actions are allowable (all are allowed if not explicitly limited otherwise).
+
 ```
 
 ### Question 4
@@ -37,11 +39,11 @@ Your answer...
 Assuming our Tunr Rails app (1) has a Song model that belongs to an Artist model and (2) uses nested resources, which of the following helpers would create a URL that routes to `songs#new`? (Select one answer)  
 
 ```
-[] artist_song_path( @artist, @song ) 
-[] new_artist_song_path( @artist )
+[] artist_song_path( @artist, @song )
+[X] new_artist_song_path( @artist )
 [] create_artist_song_path( @artist )
 [] new_artist_song_path( @artist, Song.all )
-[] new_song_path( @song ) 
+[] new_song_path( @song )
 ```
 
 ### Question 5
@@ -50,7 +52,7 @@ Where are (a) cookies and (b) session variables stored? (Select one answer)
 
 ```
 [] (a) Server, (b) Browser  
-[] (a) Browser, (b) Database  
+[X] (a) Browser, (b) Database  
 [] (a) Database, (b) Server  
 [] (a) Browser, (b) Server  
 ```
@@ -72,6 +74,9 @@ This code would make most sense as a...
 
 ```text
 Your answer...
+
+Model method. Ideally, controllers should be kept as light weight as possible with only information for each needed CRUD action and redirects using functions to perform other work when the output will vary, like in this case where the average rating influences text color.
+
 ```
 
 ### Question 7
@@ -79,14 +84,15 @@ Your answer...
 You clone yet another Tunr repo. Put the following commands in the correct order necessary to make the app run. Delete the one command that will not be used.
 
 ```
-$ rake db:drop
-$ rake db:create
-$ rails new . -d postgresql
-$ bundle install
 $ git clone git@github.com:ga-wdi-exercises/moar-tunr.git
+$ bundle install
+$ rails new . -d postgresql
+$ rake db:create
+$ rake db:drop
 $ rake db:migrate
-$ rails s
 $ rake db:seed
+$ rails s
+
 ```
 
 ### Question 8
@@ -104,7 +110,7 @@ You're a good person and decide to validate your HTML. You copy and paste the co
 The validator throws errors at you! Why? Assuming you haven't made any mistakes in your code, how could you go about accurately validating your HTML?
 
 ```
-Your answer...
+The validator only validates actual HTML, not ruby erb. To validate the HTML, open a browser, inspect, and copy the HTML and validate it.
 ```
 
 ### Question 9
@@ -117,7 +123,9 @@ $ rails new . -d postgresql
 ```
 
 ```
-Your answer...
+
+The . I think indicates an as-yet unnamed new rails app? The -d postgresql tells rails to use postgresql for the SQL database instead of the rails default.
+
 ```
 
 ### Question 10
@@ -127,9 +135,8 @@ Which **one** of the following is the most correct way to display an error messa
 ```rb
 [] @error = "Wrong password!"
 [] puts "Wrong password!"
-[] flash[:alert] = "Wrong password!"
+[X] flash[:alert] = "Wrong password!"   #alert over a notice since it's a significant issue, as opposed to an fyi, that the password is incorrect. 
 [] session[:error] = "Wrong password!"
 [] render error: "Wrong password!"
 [] flash[:notice] = "Wrong password!"
 ```
-
