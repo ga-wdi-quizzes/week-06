@@ -136,7 +136,8 @@ $ rails new . -d postgresql
 ```
 
 ```
-The first creates a new Rails project in a new directory called tunr (well, I guess it would do it in an existing directory called tunr), using whatever Rail's default database is (not postgresql)
+The first creates a new Rails project in a new directory called tunr (well, I guess it could 
+do it in an existing directory called tunr), using whatever Rail's default database is (not postgresql)
 
 The second creates a new Rails project in the current directory, using postgresql instead of the default. 
 ```
